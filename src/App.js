@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./global.css";
 
-function App() {
+import Routes from "./routes";
+import React, { useState, createContext } from "react";
+
+export const AuthContext = createContext(null);
+
+export default function App() {
+  const [auth, setAuth] = useState({
+    token: localStorage.getItem("token"),
+    nome: localStorage.getItem("nome"),
+  });
+
+  const setAuthLS = (newAuth) => {
+    setAuth(newAuth);
+    localStorage.setItem("token", newAuth.token);
+    localStorage.setItem("nome", newAuth.nome);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthContext.Provider value={{ auth: auth, setAuth: setAuthLS }}>
+      <div className="App">
+        <Routes></Routes>
+      </div>
+    </AuthContext.Provider>
   );
 }
-
-export default App;

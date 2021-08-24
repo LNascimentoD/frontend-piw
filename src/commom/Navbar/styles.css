@@ -1,0 +1,25 @@
+.navbar{
+    max-width: 700px;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #807dff;
+
+    padding: 10px;
+}
+
+img{
+    height: 60px;
+}
+
+.content{
+    color: #FFF;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

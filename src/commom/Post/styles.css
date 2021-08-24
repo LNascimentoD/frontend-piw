@@ -1,0 +1,53 @@
+.post{
+    background-color: #0f0f10;
+    color: #FFF;
+
+    max-width: 600px;
+    width: 100%;
+
+    border: 0;
+    border-radius: 10px;
+
+    padding: 25px;
+}
+
+.post p{
+    background-color: #323337;
+    
+    margin-top: 10px;
+    padding: 10px;
+
+    border: 0;
+    border-radius: 10px;
+}
+
+.post h1{
+    color: #6461ff;
+}
+
+.likes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 10px;
+}
+
+.comment form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.comment form input{
+    background-color: #242627;
+    color: #fff;
+
+    width: 400px;
+    
+    margin-top: 10px;
+    padding: 10px;
+
+    border: 0;
+    border-radius: 10px;
+}
